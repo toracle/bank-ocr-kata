@@ -2,7 +2,7 @@
 
 from __future__ import (absolute_import, division, print_function, unicode_literals)
 
-from bankocr import Ocr
+from bankocr.ocr import Ocr
 
 
 '''
@@ -14,3 +14,7 @@ from bankocr import Ocr
 
 def fixture_one():
     return '   \n  |\n  |\n   \n'
+
+def test_parse_one():
+    ocr = Ocr()
+    assert ocr.parseDigit(fixture_one()) == 1
