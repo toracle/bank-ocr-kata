@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 
 class Ocr(object):
+    def __init__(self):
+        self.data = {
+            '   \n  |\n  |\n   \n': 1,
+            ' _ \n _|\n|_ \n   \n': 2,
+            ' _ \n _|\n _|\n   \n': 3,
+            '   \n|_|\n  |\n   \n': 4,
+            ' _ \n|_ \n _|\n   \n': 5,
+            ' _ \n|_ \n|_|\n   \n': 6,
+            ' _ \n  |\n  |\n   \n': 7,
+            ' _ \n|_|\n|_|\n   \n': 8,
+            ' _ \n|_|\n _|\n   \n': 9
+        }
+
     def parseDigit(self, s):
-        if self.isDigitOne(s):
-            return 1
-        elif self.isDigitTwo(s):
-            return 2
-
-    def isDigitOne(self, s):
-        if s == '   \n  |\n  |\n   \n':
-            return True
-        return False
-
-    def isDigitTwo(self, s):
-        if s == ' _ \n _|\n|_ \n   \n':
-            return True
-        return False
+        return self.data[s]
