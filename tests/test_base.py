@@ -15,6 +15,13 @@ from bankocr.ocr import Ocr
 def fixture_one():
     return '   \n  |\n  |\n   \n'
 
+def fixture_two():
+    return ' _ \n _|\n|_ \n   \n'
+
 def test_parse_one():
     ocr = Ocr()
     assert ocr.parseDigit(fixture_one()) == 1
+
+def test_parse_two():
+    ocr = Ocr()
+    assert ocr.parseDigit(fixture_two()) == 2
