@@ -6,11 +6,17 @@ from bankocr.ocr import Ocr
 
 
 '''
-    _  _     _  _  _  _  _
-  | _| _||_||_ |_   ||_||_|
-  ||_  _|  | _||_|  ||_| _| 
-
+    _  _     _  _  _  _  _ \n
+  | _| _||_||_ |_   ||_||_|\n
+  ||_  _|  | _||_|  ||_| _|\n
+                           \n
 '''
+
+def fixture_panel():
+    return '    _  _     _  _  _  _  _ \n' \
+           '  | _| _||_||_ |_   ||_||_|\n' \
+           '  ||_  _|  | _||_|  ||_| _|\n' \
+           '                           \n'
 
 def fixture_one():
     return '   \n  |\n  |\n   \n'
@@ -74,3 +80,7 @@ def test_parse_eight():
 def test_parse_nine():
     ocr = Ocr()
     assert ocr.parseDigit(fixture_nine()) == 9
+
+# def test_parse_panel():
+#     ocr = Ocr()
+#     assert ocr.parsePanel(fixture_panel()) == 123456789

@@ -16,3 +16,6 @@ class Ocr(object):
 
     def parseDigit(self, s):
         return self.data[s]
+
+    # def parsePanel(self, s):
+    #     pass
