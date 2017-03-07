@@ -84,3 +84,17 @@ def test_parse_nine():
 # def test_parse_panel():
 #     ocr = Ocr()
 #     assert ocr.parse_panel(fixture_panel()) == 123456789
+
+def test_divide_digits():
+    ocr = Ocr()
+    assert ocr.divide_digit(fixture_panel()) == [
+        '   \n  |\n  |\n   \n',
+        ' _ \n _|\n|_ \n   \n',
+        ' _ \n _|\n _|\n   \n',
+        '   \n|_|\n  |\n   \n',
+        ' _ \n|_ \n _|\n   \n',
+        ' _ \n|_ \n|_|\n   \n',
+        ' _ \n  |\n  |\n   \n',
+        ' _ \n|_|\n|_|\n   \n',
+        ' _ \n|_|\n _|\n   \n'
+    ]

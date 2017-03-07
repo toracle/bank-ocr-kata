@@ -19,3 +19,17 @@ class Ocr(object):
 
     # def parse_panel(self, s):
     #     pass
+
+    def divide_digit(self, s):
+        lines = s.split('\n')
+        panel = {}
+        for y, line in enumerate(lines):
+            for x, i in enumerate(range(0, 27, 3)):
+                col = line[i:i+3]
+                panel[(y, x)] = col
+
+        result = []
+        for x in range(9):
+            result.append('\n'.join([panel[(y, x)] for y in range(4)])+'\n')
+
+        return result
