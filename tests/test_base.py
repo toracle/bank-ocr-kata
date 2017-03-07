@@ -47,40 +47,40 @@ def fixture_nine():
 
 def test_parse_one():
     ocr = Ocr()
-    assert ocr.parseDigit(fixture_one()) == 1
+    assert ocr.parse_digit(fixture_one()) == 1
 
 def test_parse_two():
     ocr = Ocr()
-    assert ocr.parseDigit(fixture_two()) == 2
+    assert ocr.parse_digit(fixture_two()) == 2
 
 def test_parse_three():
     ocr = Ocr()
-    assert ocr.parseDigit(fixture_three()) == 3
+    assert ocr.parse_digit(fixture_three()) == 3
 
 def test_parse_four():
     ocr = Ocr()
-    assert ocr.parseDigit(fixture_four()) == 4
+    assert ocr.parse_digit(fixture_four()) == 4
 
 def test_parse_five():
     ocr = Ocr()
-    assert ocr.parseDigit(fixture_five()) == 5
+    assert ocr.parse_digit(fixture_five()) == 5
 
 def test_parse_six():
     ocr = Ocr()
-    assert ocr.parseDigit(fixture_six()) == 6
+    assert ocr.parse_digit(fixture_six()) == 6
 
 def test_parse_seven():
     ocr = Ocr()
-    assert ocr.parseDigit(fixture_seven()) == 7
+    assert ocr.parse_digit(fixture_seven()) == 7
 
 def test_parse_eight():
     ocr = Ocr()
-    assert ocr.parseDigit(fixture_eight()) == 8
+    assert ocr.parse_digit(fixture_eight()) == 8
 
 def test_parse_nine():
     ocr = Ocr()
-    assert ocr.parseDigit(fixture_nine()) == 9
+    assert ocr.parse_digit(fixture_nine()) == 9
 
 # def test_parse_panel():
 #     ocr = Ocr()
-#     assert ocr.parsePanel(fixture_panel()) == 123456789
+#     assert ocr.parse_panel(fixture_panel()) == 123456789

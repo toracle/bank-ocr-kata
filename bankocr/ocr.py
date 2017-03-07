@@ -14,8 +14,8 @@ class Ocr(object):
             ' _ \n|_|\n _|\n   \n': 9
         }
 
-    def parseDigit(self, s):
+    def parse_digit(self, s):
         return self.data[s]
 
-    # def parsePanel(self, s):
+    # def parse_panel(self, s):
     #     pass
