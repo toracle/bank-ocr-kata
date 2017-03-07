@@ -18,6 +18,12 @@ def fixture_panel():
            '  ||_  _|  | _||_|  ||_| _|\n' \
            '                           \n'
 
+def fixture_panel_all_ones():
+    return '                           \n' \
+           '  |  |  |  |  |  |  |  |  |\n' \
+           '  |  |  |  |  |  |  |  |  |\n' \
+           '                           \n'
+
 def fixture_one():
     return '   \n  |\n  |\n   \n'
 
@@ -98,3 +104,7 @@ def test_divide_digits():
 def test_parse_panel():
     ocr = Ocr()
     assert ocr.parse_panel(fixture_panel()) == 123456789
+
+def test_parse_panel_all_ones():
+    ocr = Ocr()
+    assert ocr.parse_panel(fixture_panel_all_ones()) == 111111111
