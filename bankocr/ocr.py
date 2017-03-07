@@ -17,8 +17,14 @@ class Ocr(object):
     def parse_digit(self, s):
         return self.data[s]
 
-    # def parse_panel(self, s):
-    #     pass
+    def parse_panel(self, s):
+        digits = self.divide_digit(s)
+        nums = [self.parse_digit(digit) for digit in digits]
+        result = 0
+        for num in nums:
+            result = result * 10 + num
+
+        return result
 
     def divide_digit(self, s):
         lines = s.split('\n')
