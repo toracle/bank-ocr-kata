@@ -39,3 +39,10 @@ class Ocr(object):
             result.append('\n'.join([panel[(y, x)] for y in range(4)])+'\n')
 
         return result
+
+    def checksum(self, n):
+        pos_numbers = []
+        for i in range(1, 10):
+            pos_numbers.append((n % 10) * i)
+            n //= 10
+        return sum(pos_numbers) % 11 == 0

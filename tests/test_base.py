@@ -108,3 +108,12 @@ def test_parse_panel():
 def test_parse_panel_all_ones():
     ocr = Ocr()
     assert ocr.parse_panel(fixture_panel_all_ones()) == 111111111
+
+def test_checksum_should_pass():
+    ocr = Ocr()
+    assert ocr.checksum(345882865)
+
+def test_checksum_should_fail():
+    ocr = Ocr()
+    assert not ocr.checksum(664371495)
+    assert not ocr.checksum(345882866)
